@@ -45,11 +45,11 @@ function setGameElements() {
             newGameElem.style.display = 'block';
             pickElem.style.display = 'none';
             resultsElem.style.display = 'none';
-    setGameElements ();      
+    // setGameElements ();      
     }
     
 }
-// setGameElements ();
+setGameElements ();
 
 //Rozpoczęcie gry
 
@@ -108,7 +108,7 @@ function checkRoundWinner(playerPick, computerPick) {
         (computerPick == 'paper' &&  playerPick == 'rock')) {
 
         winnerIs = 'computer';
-
+    }
 
     if (winnerIs == 'player') {
         playerResultElem.innerHTML = "Win!";
@@ -119,7 +119,7 @@ function checkRoundWinner(playerPick, computerPick) {
 
     }
 setGamePoints();
-    //endGame();
+endGame();
 }
 
 function playerPick(playerPick) {
@@ -143,11 +143,12 @@ function setGamePoints() {
 
 function endGame() {
     if (player.score == 10) {
-        alert(player.name +'Win!');
+        alert(player.name +' is the winner!');
         gameState = 'ended'
+    setGameElements ();
     } else if (computer.score == 10) {
-        alert('Computer is win!');
+        alert('Computer is the winner!');
         gameState = 'ended'
     setGameElements();
     }
-};
+}
