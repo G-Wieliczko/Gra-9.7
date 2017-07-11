@@ -51,7 +51,7 @@ function setGameElements() {
     }
     
 }
-setGameElements ();
+setGameElements();
 
 //Rozpoczęcie gry
 
@@ -111,8 +111,8 @@ function checkRoundWinner(playerPick, computerPick) {
         playerResultElem.innerHTML = computerResultElem.innerHTML = "Draw!";
 
     }
-setGamePoints();
-endGame();
+    setGamePoints();
+    endGame();
 }
 
 function playerPick(playerPick) {
@@ -138,11 +138,10 @@ function endGame() {
     if (player.score == 10) {
         alert(player.name +' is the winner!');
         gameState = 'ended'
-    setGameElements ();
+    setGameElements();
     } else if (computer.score == 10) {
         alert('Computer is the winner!');
         gameState = 'ended'
     setGameElements();
     }
 }
-
